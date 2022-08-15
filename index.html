@@ -6,7 +6,9 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 <body>
+  <b><p>Today is <u><label id='today'></label></u></p></b>
   <py-script>
-  print('Hello, World!')
+import datetime as dt
+pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
   </py-script>
 </body>
