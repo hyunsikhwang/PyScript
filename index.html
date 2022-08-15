@@ -4,11 +4,16 @@
     <title>Pyscript Hello World</title>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+      - paths:
+        - /example.py
+    </py-env>
 </head>
 <body>
-  <b><p>Today is <u><label id='today'></label></u></p></b>
+  <h1>Let's print random numbers</h1>
+  <b>Doe's lucky number is <label id="lucky"></label></b>
   <py-script>
-import datetime as dt
-pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+    from example import generate_random_number
+    pyscript.write('lucky', generate_random_number())
   </py-script>
 </body>
