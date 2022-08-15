@@ -4,15 +4,15 @@
     <title>Pyscript Hello World</title>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <py-env>
-      - paths:
-        - ./example.py
-        - numpy
-        - pandas
-    </py-env>
 </head>
 <body>
-  <h1>Let's print random numbers</h1>
+  <py-env>
+    - paths:
+      - ./example.py
+      - numpy
+      - pandas
+  </py-env>
+<h1>Let's print random numbers</h1>
   <b>Doe's lucky number is <label id="lucky"></label></b>
   <py-script>
     import numpy as np
